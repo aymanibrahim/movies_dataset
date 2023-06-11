@@ -64,6 +64,10 @@ class MovieDataset:
 
         # Merge movies_df and ratings_df on the 'id' column
         df = pd.merge(movies_df, ratings_df[['id', 'rating']], on='id')
+        
+        # Select only the required columns
+        cols = ['id', 'title', 'release_year', 'director', 'genre', 'rating']
+        df = df.loc[:, cols]
         return df
 
     @staticmethod
