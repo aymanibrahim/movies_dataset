@@ -68,6 +68,9 @@ class MovieDataset:
         # Select only the required columns
         cols = ['id', 'title', 'release_year', 'director', 'genre', 'rating']
         df = df.loc[:, cols]
+        
+        # Round the rating score to 1 decimal
+        df['rating'] = np.around(df['rating'], decimals=1)
         return df
 
     @staticmethod
