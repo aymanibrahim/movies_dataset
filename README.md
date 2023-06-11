@@ -150,6 +150,41 @@ TV Movie             23
 Name: genre, dtype: int64
 ```
 
+## Example movies_dataset,json
+
+```
+[{
+"id":949,
+"title":"Heat",
+"release_year":"1995",
+"director":"Michael Mann",
+"genre":"Action",
+"rating":3.6},
+
+{
+"id":949,
+"title":"Heat",
+"release_year":"1995",
+"director":"Michael Mann",
+"genre":"Crime",
+"rating":3.6
+},
+
+...
+
+{
+"id":710,
+"title":"GoldenEye",
+"release_year":"1995",
+"director":"Martin Campbell",
+"genre":"Adventure",
+"rating":1.5},
+
+...
+
+}]
+```
+
 ### DirectorExtractor
 
 The `DirectorExtractor` class is used to extract director information from a JSON string.
