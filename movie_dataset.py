@@ -33,7 +33,13 @@ class MovieDataset:
     @staticmethod
     def load_data(metadata_file, ratings_file, credits_file):
         """
-        
+        Loads data from the given CSV files and returns them as pandas DataFrames.
+
+        :param metadata_file: str The path to the metadata CSV file.
+        :param ratings_file: str The path to the ratings CSV file.
+        :param credits_file: str The path to the credits CSV file.
+        :return: tuple of pd.DataFrame  containing the metadata, ratings and credits DataFrames.
+
         """
         metadata_df = pd.read_csv(metadata_file)
         ratings_df = pd.read_csv(ratings_file)
