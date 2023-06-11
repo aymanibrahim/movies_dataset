@@ -99,7 +99,7 @@ class MovieDataset:
         # Split 'genre' into multiple columns
         genres_split = movies_df['genre'].apply(lambda x: pd.Series(x, dtype=object)).stack().reset_index(level=1,
                                                                                                          drop=True)
-
+        
         # Replace "genres" column with "genre"
         genres_split.name = 'genre'
 
@@ -164,10 +164,10 @@ class MovieDataset:
         :param n: int the number of movies required (default n=5)
         :return: float the average rating of all the movies.
         """
-        # group by 'id' and calculate the mean rating for each group
+        # Group by 'id' and calculate the mean rating for each group
         grouped_movies = self.df.groupby(['id', 'title', 'release_year']).mean().reset_index()
 
-        # return the top n highest-rated movies
+        # Return the top n highest-rated movies
         return grouped_movies.nlargest(n, 'rating')
     
     def movies_per_year(self):
@@ -176,10 +176,10 @@ class MovieDataset:
         
         :return: pd.DataFrame the number of movies released each year.
         """
-        # filter out rows with missing or invalid release years
+        # Filter out rows with missing or invalid release years
         valid_release_years = self.df[self.df['release_year'].notnull() & (self.df['release_year'] != 'NaT')]
 
-        # group by 'release_year' and count the number of movies
+        # Group by 'release_year' and count the number of movies
         return valid_release_years.groupby('release_year')['title'].count()
 
 
@@ -206,12 +206,12 @@ class MovieDataset:
 def main():
     # Set paths of data files
     
-    # full data files
+    # Full data files
     # metadata_file = "data/movies_metadata.csv"
     # credits_file = "data/credits.csv"    
     # ratings_file = "data/ratings.csv"
     
-    # sample data files
+    # Sample data files
     metadata_file = "data/sample_data/sample_metadata.csv"
     credits_file = "data/sample_data/sample_credits.csv"
     ratings_file = "data/ratings_small.csv"

@@ -24,8 +24,8 @@ Analyzing movies data, including extracting information about title, release yea
 - [Installation](#installation)
 - [Usage](#usage)
   - [MovieDataset](#moviedataset)
-  - [GenreExtractor](#genreextractor)
   - [DirectorExtractor](#directorextractor)
+  - [GenreExtractor](#genreextractor)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
@@ -150,21 +150,6 @@ TV Movie             23
 Name: genre, dtype: int64
 ```
 
-### GenreExtractor
-
-The `GenreExtractor` class is used to extract genre information from a JSON string.
-
-Example usage:
-
-```python
-from genre_extractor import GenreExtractor
-
-extractor = GenreExtractor()
-sample_genre_data = '[{"id": 18, "name": "Drama"}, {"id": 35, "name": "Comedy"}, {"id": 10749, "name": "Romance"}]'
-genres = extractor.extract_genre(sample_genre_data)
-print(genres)  # Output: ['Drama', 'Comedy', 'Romance']
-```
-
 ### DirectorExtractor
 
 The `DirectorExtractor` class is used to extract director information from a JSON string.
@@ -178,6 +163,21 @@ extractor = DirectorExtractor()
 crew_data = '[{"credit_id": "52fe4284c3a36847f8024f49", "department": "Directing", "gender": 2, "id": 7879, "job": "Director", "name": "John Lasseter", "profile_path": "/7EdqiNbr4FRjIhKHyPPdFfEEEFG.jpg"}]'
 director = extractor.extract_director(crew_data)
 print(director)  # Output: "John Lasseter"
+```
+
+### GenreExtractor
+
+The `GenreExtractor` class is used to extract genre information from a JSON string.
+
+Example usage:
+
+```python
+from genre_extractor import GenreExtractor
+
+extractor = GenreExtractor()
+sample_genre_data = '[{"id": 18, "name": "Drama"}, {"id": 35, "name": "Comedy"}, {"id": 10749, "name": "Romance"}]'
+genres = extractor.extract_genre(sample_genre_data)
+print(genres)  # Output: ['Drama', 'Comedy', 'Romance']
 ```
 
 ## Testing
