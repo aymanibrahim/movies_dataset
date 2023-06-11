@@ -154,31 +154,33 @@ Name: genre, dtype: int64
 
 ```
 [{
-"id":949,
-"title":"Heat",
-"release_year":"1995",
-"director":"Michael Mann",
-"genre":"Action",
-"rating":3.6},
+  "id":949,
+  "title":"Heat",
+  "release_year":"1995",
+  "director":"Michael Mann",
+  "genre":"Action",
+  "rating":3.6
+},
 
 {
-"id":949,
-"title":"Heat",
-"release_year":"1995",
-"director":"Michael Mann",
-"genre":"Crime",
-"rating":3.6
+  "id":949,
+  "title":"Heat",
+  "release_year":"1995",
+  "director":"Michael Mann",
+  "genre":"Crime",
+  "rating":3.6
 },
 
 ...
 
 {
-"id":710,
-"title":"GoldenEye",
-"release_year":"1995",
-"director":"Martin Campbell",
-"genre":"Adventure",
-"rating":1.5},
+  "id":710,
+  "title":"GoldenEye",
+  "release_year":"1995",
+  "director":"Martin Campbell",
+  "genre":"Adventure",
+  "rating":1.5
+},
 
 ...
 
