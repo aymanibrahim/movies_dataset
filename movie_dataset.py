@@ -10,7 +10,6 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 warnings.filterwarnings('ignore')
 
-
 class MovieDataset:
     """A class to process movie dataset"""
 
@@ -39,7 +38,6 @@ class MovieDataset:
         :param ratings_file: str The path to the ratings CSV file.
         :param credits_file: str The path to the credits CSV file.
         :return: tuple of pd.DataFrame  containing the metadata, ratings and credits DataFrames.
-
         """
         metadata_df = pd.read_csv(metadata_file)
         ratings_df = pd.read_csv(ratings_file)
@@ -75,7 +73,6 @@ class MovieDataset:
 
         :param metadata_df: pd.DataFrame The metadata DataFrame.
         :return: pd.DataFrame movides_df as the preprocessed metadata DataFrame.
-
         """
         # Use metadata_df columns ['id','title', 'release_date'] to build movies_df dataframe
         cols = ['id', 'title', 'release_date']
@@ -117,7 +114,6 @@ class MovieDataset:
 
         :param credits_df: pd.DataFrame The credits DataFrame.
         :return: pd.DataFrame The preprocessed credits DataFrame.
-
         """
         # Extract director from the 'crew' column in credits_df
         director_extractor = DirectorExtractor()
