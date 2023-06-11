@@ -1,4 +1,4 @@
-# Movies Dataset Project
+# Movies Dataset
 
 Analyzing movies data, including extracting information about title, release year, director, genres, and rating, as well as calculating various statistics such as average ratings and top-rated movies.
 
@@ -30,7 +30,7 @@ Analyzing movies data, including extracting information about title, release yea
 - [Contributing](#contributing)
 - [License](#license)
 
-## Data files
+## Data
 
 The dataset files are available in CSV format and can be downloaded from the following link:
 
