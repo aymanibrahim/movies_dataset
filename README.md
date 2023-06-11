@@ -53,15 +53,15 @@ Download the repository
 
 Download the data files from [https://www.kaggle.com/rounakbanik/the-movies-dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset)
 
-Put the data files in `data` directory
+Place the data files within the `data` directory.
 
-To install the required dependencies, run the following command:
+Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-To install the `movie_dataset` package, run the following command:
+Install the `movie_dataset` package
 
 ```bash
 pip install .
