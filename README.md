@@ -73,7 +73,7 @@ pip install .
 
 The `MovieDataset` class is used to load and analyze movie data from CSV files. It requires three CSV files as input: metadata, ratings, and credits.
 
-Example usage:
+#### Example usage
 
 ```python
 from movie_dataset import MovieDataset
@@ -96,7 +96,7 @@ print(dataset.movies_per_genre())
 dataset.save_to_json(movies_json_file)
 ```
 
-Example output
+#### Example output
 
 ```
 Unique movies: 2,830
@@ -150,7 +150,7 @@ TV Movie             23
 Name: genre, dtype: int64
 ```
 
-## Example movies_dataset,json
+#### Example movies_dataset,json
 
 ```
 [{
