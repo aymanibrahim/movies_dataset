@@ -81,7 +81,7 @@ from movie_dataset import MovieDataset
 metadata_file = "path/to/metadata.csv"
 ratings_file = "path/to/ratings.csv"
 credits_file = "path/to/credits.csv"
-movies_json_file = "path/to//movies_dataset.json"
+movies_json_file = "path/to/movies_dataset.json"
 
 dataset = MovieDataset(metadata_file, ratings_file, credits_file)
 
